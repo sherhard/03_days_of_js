@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 of js</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+       <div class="container">
+        <h2> 03 of js november 03.11.23</h2>
+        <h3>Упражнения уровень 1</h3>
+            <section>
+                <p>проверяем можно ли вам водить машину</p>
+                <input type="text" id="input_01" placeholder="Введите свой возраст">
+    
+                <input type="button" onclick="myDrive()" value="button">
+                <p id="price"></p>
+            </section>
+
+            <section>
+                <p>кто старше (я или вы)</p>
+            <input type="text" placeholder="Введите свой возраст" id="age">
+            <input type="button" onclick="youAge()" value="button">
+            <p id="your_age"></p>
+            </section>
+
+            <section>
+                <input type="number" id="number1" placeholder="введите число a">
+                <input type="number" id="number2" placeholder="введите число b">
+                <input type="button" value="button" onclick="comparison()">
+                <p id="compaTwo"></p>
+             
+
+
+            </section>
+       </div>
+
+        <script src="main/drive.js"></script>
+        <script src="main/your_age.js"></script>
+        <script>
+            function comparison(){
+                let num1=document.getElementById('number1').value;
+                let num2=document.getElementById('number2').value;
+                let compaTwo=document.getElementById('compaTwo')
+
+                if(num1>=num2){
+                    compaTwo.innerHTML=`${num1} больше ${num2}`
+                }else{
+                    compaTwo.innerHTML=`${num1} меньше ${num2}`;
+                }
+
+            }
+        </script>
+</body>
+</html>
